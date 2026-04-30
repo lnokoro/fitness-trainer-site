@@ -11,3 +11,29 @@ header {
   background: #1f2937;
   color: white;
 }
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: #f3f4f6;
+}
+
+/* Sections */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}

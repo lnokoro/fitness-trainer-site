@@ -7,4 +7,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   });
 
-  
+   // jQuery accordion
+  $("#accordion").accordion();
+
+  // Slideshow
+  let slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3000);
+
+   // AJAX load JSON
+  fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("resultsContainer");
+
+      data.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("resultCard");
+        div.innerHTML = `
+          <h3>${item.name}</h3>
+          <p>${item.result}</p>
+        `;
+        container.appendChild(div);
+      });
+    });

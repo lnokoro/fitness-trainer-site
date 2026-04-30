@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <p>${item.result}</p>
         `;
         container.appendChild(div);
-      });
+      })
+      .catch(error => console.error("Error loading data:", error));
     });
   // Web Storage
   const form = document.getElementById("contactForm");

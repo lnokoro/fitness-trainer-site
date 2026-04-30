@@ -37,3 +37,47 @@ section {
   max-width: 600px;
   margin: auto;
 }
+
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* AJAX results */
+#resultsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.resultCard {
+  background: #e5e7eb;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: #10b981;
+  color: white;
+  border: none;
+}

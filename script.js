@@ -36,3 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(div);
       });
     });
+  // Web Storage
+  const form = document.getElementById("contactForm");
+  const welcome = document.getElementById("welcomeMessage");
+
+  if (localStorage.getItem("userName")) {
+    welcome.textContent = "Welcome back, " + localStorage.getItem("userName") + "!";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    localStorage.setItem("userName", name);
+
+    welcome.textContent = "Thanks, " + name + "! We'll be in touch.";
+
+    form.reset();
+  });
+
+});

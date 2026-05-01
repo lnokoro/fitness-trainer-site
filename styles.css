@@ -32,6 +32,21 @@ section {
   text-align: center;
 }
 
+/* Pricing */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background: #e5e7eb;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+}
+
 /* Slideshow */
 .slideshow {
   position: relative;

@@ -21,22 +21,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 3000);
 
    // AJAX load JSON
-  fetch("data.json")
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById("resultsContainer");
-
-      data.forEach(item => {
-        const div = document.createElement("div");
-        div.classList.add("resultCard");
-        div.innerHTML = `
-          <h3>${item.name}</h3>
-          <p>${item.result}</p>
-        `;
-        container.appendChild(div);
-      })
-      .catch(error => console.error("Error loading data:", error));
+  
+fetch("data.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("resultsContainer");
+container.innerHTML = "";
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.classList.add("resultCard");
+      div.innerHTML = `
+        <h3>${item.name}</h3>
+        <p>${item.result}</p>
+      `;
+      container.appendChild(div);
     });
+  })
+  .catch(error => console.error("Error loading data:", error));
   // Web Storage
   const form = document.getElementById("contactForm");
   const welcome = document.getElementById("welcomeMessage");

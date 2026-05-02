@@ -24,6 +24,15 @@ nav a {
   text-align: center;
   padding: 60px;
   background: #f3f4f6;
+   color: white;
+  background: url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero h2,
+.hero p,
+.hero button {
+  position: relative;
+  z-index: 1;
 }
 
 /* Sections */
